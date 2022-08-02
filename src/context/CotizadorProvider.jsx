@@ -4,8 +4,15 @@ const CotizadorContext = createContext();
   
 const  CotizadorProvider = ({children}) => {
 
+    const hola = "Hola Mundo"
+
+
     return (
-        <CotizadorContext.Provider>
+        <CotizadorContext.Provider
+            value={{
+               hola
+            }}
+        >
             {children}
         </CotizadorContext.Provider>
     )

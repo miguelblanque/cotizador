@@ -1,9 +1,14 @@
 import { MARCAS } from "../context"
 import { YEARS } from "../context"
 import { PLANES } from "../context"
-import { Fragment } from "react"
+import { Fragment, useContext } from "react"
+import CotizadorContext from "../context/CotizadorProvider"
 
 const Formulario = () => {
+
+    const { hola} = useContext(CotizadorContext)
+
+    console.log(hola)
   return (
    <>
     <form>

@@ -5,11 +5,7 @@ function App() {
  
 
   return (
-    <CotizadorProvider
-        value={{
-          
-        }}
-    >
+    <CotizadorProvider>
       <AppSeguro />
     </CotizadorProvider>
   )
