@@ -6,11 +6,18 @@ import CotizadorContext from "../context/CotizadorProvider"
 
 const Formulario = () => {
 
-    const { hola} = useContext(CotizadorContext)
+    const { modal,cambiarModal } = useContext(CotizadorContext)
 
-    console.log(hola)
+     console.log(modal, cambiarModal)
+   
   return (
    <>
+
+    <button 
+        onClick ={() => cambiarModal()}    
+    >
+        Cambiar Modal de Context
+    </button>
     <form>
         <div className="my-5">
             <label className="block mb-3 font-bold text-gray-400 uppercase">Marca</label>
