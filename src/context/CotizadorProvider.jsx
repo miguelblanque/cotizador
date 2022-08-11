@@ -4,17 +4,27 @@ const CotizadorContext = createContext();
   
 const  CotizadorProvider = ({children}) => {
 
-    const [modal, setModal] = useState(false)
+    const [datos , setDatos] = useState({
+        marca: '',
+        year: '',
+        plan: ''
+    })
 
+    const [error, setError] = useState('')
 
-    const cambiarModal = () =>{
-        setModal(!modal)
-    }
+   const handleChangeDatos = e => {
+        setDatos({
+            ...datos,
+            [e.target.name] : e.target.value
+        })
+   }
     return (
         <CotizadorContext.Provider
             value={{
-              modal,
-              cambiarModal
+                datos,
+                handleChangeDatos,
+                error,
+                setError
             }}
         >
             {children}
