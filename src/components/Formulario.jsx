@@ -8,7 +8,7 @@ import Error from "./Error"
 
 const Formulario = () => {
 
-    const {datos, handleChangeDatos, error, setError} = useCotizador()
+    const {datos, handleChangeDatos, error, setError, cotizarSeguro} = useCotizador()
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -20,7 +20,9 @@ const Formulario = () => {
         }
 
         setError('')
-        // TODO: Cotizar
+        
+
+        cotizarSeguro()
 
 
     }
